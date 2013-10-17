@@ -70,7 +70,7 @@ switch ($_POST['operation']) {
     $menu_item->setAction("REPLY");
     array_push($menu_items, $menu_item);
     
-    $menu_items = new Google_MenuItem();
+    $menu_item = new Google_MenuItem();
     $menu_item->setAction("OPEN_URI");
     $menu_item->setPayload("http://www.reddit.com");
     array_push($menu_items, $menu_item);
