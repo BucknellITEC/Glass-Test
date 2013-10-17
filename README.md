@@ -1,6 +1,9 @@
-Google Mirror API's Quick Start for PHP
+Test Glass App
 ========================
 
-The documentation for this quick start is maintained on developers.google.com.
+Starting with the Google Quick Start App to build some basic Glass 
+functionality for class and research demos.
+
+The documentation for the Google Quick Start is maintained on developers.google.com.
 Please see here for more information:
 https://developers.google.com/glass/quickstart/php
