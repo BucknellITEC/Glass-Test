@@ -263,6 +263,14 @@ foreach ($subscriptions->getItems() as $subscription) {
           Insert the above message
         </button>
       </form>
+      
+      <form method="post">
+        <input type="hidden" name="operation" value="insertItem">
+        <textarea name="message" class="span4">Second Button</textarea><br/>
+        <button class="btn btn-block" type="submit">
+          Insert the above message
+        </button>
+      </form>
 
       <form method="post">
         <input type="hidden" name="operation" value="insertItem">
