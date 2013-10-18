@@ -69,6 +69,11 @@ switch ($_POST['operation']) {
       $second_timeline_item->setBundleId("Bucknell_Tour");
       $image_url =  $base_url . "/static/images/Bertrand_Post_Fire.jpg";
       insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("Bertrand Vandalized");
+      $second_timeline_item->setBundleId("Bucknell_Tour");
+      $image_url =  $base_url . "/static/images/Bertrand_TP.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
    
     $message = "Timeline Item inserted!";
     break;
