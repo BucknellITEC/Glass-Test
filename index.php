@@ -68,7 +68,7 @@ switch ($_POST['operation']) {
       $second_timeline_item->setText("Bertrand Library After Fire");
       $second_timeline_item->setBundleId("Bucknell_Tour");
       $image_url =  "http://sandboxitec.net/Glass-Test/static/images/chipotle-tube-640x360.jpg";
-      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', $image_url);
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
    
     $message = "Timeline Item inserted!";
     break;
