@@ -52,9 +52,23 @@ switch ($_POST['operation']) {
     } else {
       insert_timeline_item($mirror_service, $new_timeline_item, null, null);
     }
-
+    break;
+    
+  case 'newInsert':
+      $new_timeline_item = new Google_TimelineItem();
+      
+      $new_timeline_item->setText('Hello World');
+      $new_timeline_item->setBundleId("Bucknell_Tour");
+      $new_timeline_item->setIsBundleCover(True);
+      $notification = new Google_NotificationConfig();
+      $notification->setLevel("DEFAULT");
+      $new_timeline_item->setNotification($notification);
+      insert_timeline_item($mirror_service, $new_timeline_item, null, null);
+      
+              
     $message = "Timeline Item inserted!";
     break;
+
   case 'insertItemWithAction':
     $new_timeline_item = new Google_TimelineItem();
     $new_timeline_item->setText("What did you have for lunch?");
@@ -262,8 +276,8 @@ foreach ($subscriptions->getItems() as $subscription) {
 
 
       <form method="post">
-        <input type="hidden" name="operation" value="insertItem">
-        <textarea name="message" class="span4">Hello World!</textarea><br/>
+        <input type="hidden" name="operation" value="newInsert">
+        <textarea name="message" class="span4">Something Else</textarea><br/>
         <button class="btn btn-block" type="submit">
           Insert the above message
         </button>
