@@ -64,8 +64,11 @@ switch ($_POST['operation']) {
       $notification->setLevel("DEFAULT");
       $new_timeline_item->setNotification($notification);
       insert_timeline_item($mirror_service, $new_timeline_item, null, null);
-      
-              
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("first tour card");
+      $second_timeline_item->setBundleId("Bucknell_Tour");
+      insert_timeline_item($mirror_service, $second_timeline_item, null, null);
+   
     $message = "Timeline Item inserted!";
     break;
 
