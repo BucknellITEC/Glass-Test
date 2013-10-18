@@ -65,9 +65,10 @@ switch ($_POST['operation']) {
       $new_timeline_item->setNotification($notification);
       insert_timeline_item($mirror_service, $new_timeline_item, null, null);
       $second_timeline_item = new Google_TimelineItem();
-      $second_timeline_item->setText("first tour card");
+      $second_timeline_item->setText("Bertrand Library After Fire");
       $second_timeline_item->setBundleId("Bucknell_Tour");
-      insert_timeline_item($mirror_service, $second_timeline_item, null, null);
+      $image_url = $base_url . "/static/images/Bertrand_Post_Fire.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', $image_url);
    
     $message = "Timeline Item inserted!";
     break;
