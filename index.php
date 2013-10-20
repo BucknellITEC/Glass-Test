@@ -57,22 +57,38 @@ switch ($_POST['operation']) {
   case 'newInsert':
       $new_timeline_item = new Google_TimelineItem();
       
-      $new_timeline_item->setText('Hello World');
-      $new_timeline_item->setBundleId("Bucknell_Tour");
+      $new_timeline_item->setText('Bucknell Augmented History Demo');
+      $new_timeline_item->setBundleId("Bucknell_Tour_Final");
       $new_timeline_item->setIsBundleCover(True);
       $notification = new Google_NotificationConfig();
       $notification->setLevel("DEFAULT");
       $new_timeline_item->setNotification($notification);
-      insert_timeline_item($mirror_service, $new_timeline_item, null, null);
+      $image_url = $base_url . "/static/images/printable-bucknellB-large.png";
+      insert_timeline_item($mirror_service, $new_timeline_item, 'image/png', file_get_contents($image_url));
       $second_timeline_item = new Google_TimelineItem();
-      $second_timeline_item->setText("Bertrand Library After Fire");
-      $second_timeline_item->setBundleId("Bucknell_Tour");
+      $second_timeline_item->setText("Bertrand Library Fire Damage: 1960");
+      $second_timeline_item->setBundleId("Bucknell_Tour_Final");
       $image_url =  $base_url . "/static/images/Bertrand_Post_Fire.jpg";
       insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
       $second_timeline_item = new Google_TimelineItem();
-      $second_timeline_item->setText("Bertrand Vandalized");
-      $second_timeline_item->setBundleId("Bucknell_Tour");
+      $second_timeline_item->setText("Ask Desk: 2012");
+      $second_timeline_item->setBundleId("Bucknell_Tour_Final");
+      $image_url =  $base_url . "/static/images/Ask_Desk.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("Scott Tissue Prank: 1970");
+      $second_timeline_item->setBundleId("Bucknell_Tour_Final");
       $image_url =  $base_url . "/static/images/Bertrand_TP.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("Early 60s Students Demonstrate Refinement");
+      $second_timeline_item->setBundleId("Bucknell_Tour_Final");
+      $image_url =  $base_url . "/static/images/Vaughn_Lit_Students.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("Early 60s Students Demonstrate Conformity");
+      $second_timeline_item->setBundleId("Bucknell_Tour_Final");
+      $image_url =  $base_url . "/static/images/Vaughn_Lit_Students.jpg";
       insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
    
     $message = "Timeline Item inserted!";
