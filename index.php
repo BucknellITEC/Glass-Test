@@ -59,6 +59,7 @@ switch ($_POST['operation']) {
       $image_url = $base_url . "/static/images/printable-bucknellB-large.png";
       $new_timeline_item->setHtml('<article class="photo">
       <img src="'.$image_url .'" width="100%" height="100%">
+      <div class="photo-overlay"/>
       <section>
       <p class="text-auto-size gray"><strong>New Perspectives</strong> Emerging Technology @ Bucknell
       </p>
@@ -76,6 +77,7 @@ switch ($_POST['operation']) {
       $image_url =  $base_url . "/static/images/Bucknell_Panorama.jpg";
       $second_timeline_item->setHtml('<article class="photo">
       <img src="'.$image_url .'" width="100%" height="100%">
+      <div class="photo-overlay"/>
       <section>
       <p class="text-auto-size">From high above, we can see Bucknell\'s beautiful natural context
       </p>
@@ -89,6 +91,7 @@ switch ($_POST['operation']) {
       $image_url =  $base_url . "/static/images/Library_Above.jpg";
       $second_timeline_item->setHtml('<article class="photo">
       <img src="'.$image_url .'" width="100%" height="100%">
+      <div class="photo-overlay"/>
       <section>
       <p class="text-auto-size">The quadcopter\'s point of view gives a new perspective on the Bertrand Library
       </p>
@@ -102,6 +105,7 @@ switch ($_POST['operation']) {
       $image_url =  $base_url . "/static/images/Drone.jpg";
       $second_timeline_item->setHtml('<article class="photo">
       <img src="'.$image_url .'" width="100%" height="100%">
+      <div class="photo-overlay"/>
       <section>
       <p class="text-auto-size">Bucknell\'s Phantom QuadCopter takes to the sky #ThroughGlass
       </p>
@@ -115,6 +119,7 @@ switch ($_POST['operation']) {
       $image_url =  $base_url . "/static/images/Toole_Class.jpg";
       $second_timeline_item->setHtml('<article class="photo">
       <img src="'.$image_url .'" width="100%" height="100%">
+      <div class="photo-overlay"/>
       <section>
       <p class="text-auto-size">Students in Professor Toole\'s freshman seminar discuss augmented reality #ThroughGlass
       </p>
@@ -128,6 +133,7 @@ switch ($_POST['operation']) {
       $image_url =  $base_url . "/static/images/Library_Orientation1.jpg";
       $second_timeline_item->setHtml('<article class="photo">
       <img src="'.$image_url .'" width="100%" height="100%">
+      <div class="photo-overlay"/>
       <section>
       <p class="text-auto-size">Students explore Glass during the library Orientation #ThroughGlass
       </p>
@@ -141,6 +147,7 @@ switch ($_POST['operation']) {
       $image_url =  $base_url . "/static/images/High_Line.jpg";
       $second_timeline_item->setHtml('<article class="photo">
       <img src="'.$image_url .'" width="100%" height="100%">
+      <div class="photo-overlay"/>
       <section>
       <p class="text-auto-size">Bucknell technologist Brianna Derr explores New York\'s High Line #ThroughGlass
       </p>
@@ -154,6 +161,7 @@ switch ($_POST['operation']) {
       $image_url =  $base_url . "/static/images/Glass_Showroom.jpg";
       $second_timeline_item->setHtml('<article class="photo">
       <img src="'.$image_url .'" width="100%" height="100%">
+      <div class="photo-overlay"/>
       <section>
       <p class="text-auto-size">Unique perspectives on Bucknell #ThroughGlass
       </p>
