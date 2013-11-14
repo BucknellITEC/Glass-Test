@@ -73,14 +73,50 @@ switch ($_POST['operation']) {
       
   
       $second_timeline_item = new Google_TimelineItem();
-      $second_timeline_item->setText("This Google Glass presentation demonstrates how Bucknell students, faculty and staff are using emerging technologies to reveal new perspectives of Bucknell and beyond! ");
+      $second_timeline_item->setText("This Google Glass presentation demonstrates how Bucknell students, faculty and staff are using emerging technologies, like Glass, to reveal new perspectives of Bucknell and beyond! ");
       $second_timeline_item->setBundleId("NY_Trip_Deck");
       insert_timeline_item($mirror_service, $second_timeline_item, null, null);
       
       $second_timeline_item = new Google_TimelineItem();
-      $second_timeline_item->setText("Confoming Students: 1960");
-      $second_timeline_item->setBundleId("Bucknell_Tour_Final2");
-      $image_url =  $base_url . "/static/images/Vaughn_Lit_Students.jpg";
+      $second_timeline_item->setText("Unique perspectives on Bucknell #ThroughGlass");
+      $second_timeline_item->setBundleId("NY_Trip_Deck");
+      $image_url =  $base_url . "/static/images/Glass_Showroom.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("Bucknell technologist Brianna Derr explores New York's High Line #ThroughGlass");
+      $second_timeline_item->setBundleId("NY_Trip_Deck");
+      $image_url =  $base_url . "/static/images/High_Line.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("Students explore Glass during the library Orientation #ThroughGlass");
+      $second_timeline_item->setBundleId("NY_Trip_Deck");
+      $image_url =  $base_url . "/static/images/Library_Orientation.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("Students in Professor Toole's freshman seminar discuss augmented reality #ThroughGlass");
+      $second_timeline_item->setBundleId("NY_Trip_Deck");
+      $image_url =  $base_url . "/static/images/Toole_Class.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("Bucknell's Phantom QuadCopter takes to the sky #ThroughGlass");
+      $second_timeline_item->setBundleId("NY_Trip_Deck");
+      $image_url =  $base_url . "/static/images/Drone.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("The quadcopter's point of view gives a new perspective on the Bertrand Library");
+      $second_timeline_item->setBundleId("NY_Trip_Deck");
+      $image_url =  $base_url . "/static/images/Library_Above.jpg";
+      insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
+      
+      $second_timeline_item = new Google_TimelineItem();
+      $second_timeline_item->setText("From high above, we can see Bucknell's beautiful natural context");
+      $second_timeline_item->setBundleId("NY_Trip_Deck");
+      $image_url =  $base_url . "/static/images/Bucknell_Panorama.jpg";
       insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
       
     $message = "Timeline Item inserted!";
