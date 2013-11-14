@@ -56,8 +56,9 @@ switch ($_POST['operation']) {
     
   case 'newInsert':
       $new_timeline_item = new Google_TimelineItem();
-      
-      $new_timeline_item->setHtml('<article>
+      $image_url = $base_url . "/static/images/printable-bucknellB-large.png";
+      $new_timeline_item->setHtml('<article class="photo">
+      <img src="'.$image_url .'" width="100%" height="100%">
       <section>
       <p class="text-auto-size"><strong>New Perspectives</strong> Emerging Technology @ Bucknell
       </p>
@@ -68,7 +69,7 @@ switch ($_POST['operation']) {
       $notification = new Google_NotificationConfig();
       $notification->setLevel("DEFAULT");
       $new_timeline_item->setNotification($notification);
-      $image_url = $base_url . "/static/images/printable-bucknellB-large.png";
+      
       insert_timeline_item($mirror_service, $new_timeline_item, 'image/png', file_get_contents($image_url));
       
   
@@ -92,7 +93,7 @@ switch ($_POST['operation']) {
       $second_timeline_item = new Google_TimelineItem();
       $second_timeline_item->setText("Students explore Glass during the library Orientation #ThroughGlass");
       $second_timeline_item->setBundleId("NY_Trip_Deck");
-      $image_url =  $base_url . "/static/images/Library_Orientation.jpg";
+      $image_url =  $base_url . "/static/images/Library_Orientation1.jpg";
       insert_timeline_item($mirror_service, $second_timeline_item, 'image/jpeg', file_get_contents($image_url));
       
       $second_timeline_item = new Google_TimelineItem();
